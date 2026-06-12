@@ -10,7 +10,7 @@ export async function createProduct(input: ProductInput){
   return resp.data as Product
 }
 export async function updateProduct(id: string, input: ProductInput){
-  const resp = await api.put(`/product/${id}`, input)
+  const resp = await api.patch(`/product/${id}`, input)
   return resp.data as Product
 }
 export async function deleteProduct(id: string){
